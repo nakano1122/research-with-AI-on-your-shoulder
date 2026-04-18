@@ -1,6 +1,6 @@
 # Research with AI on Your Shoulder
 
-**論文調査を3倍速く。AIエージェントがあなたの研究をサポートします。**
+**AIエージェントと一緒に、研究をもっと効率的に。**
 
 <p align="center">
   <img src="docs/images/architecture-overview.png" alt="Architecture">
