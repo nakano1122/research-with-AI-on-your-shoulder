@@ -13,28 +13,3 @@
 <p align="center">
   <img src="docs/images/parallel-agents.png" alt="Parallel Agents">
 </p>
-
-## 使い方
-
-<p align="center">
-  <img src="docs/images/workflow-example.png" alt="Workflow">
-</p>
-
-## セットアップ
-
-```bash
-pip install pre-commit && pre-commit install
-```
-
-`/research-partner` で開始
-
-## ディレクトリ構成
-
-<p align="center">
-  <img src="docs/images/knowledge-structure.png" alt="Knowledge Structure">
-</p>
-
-## 詳細
-
-- [framework/README.md](framework/README.md)
-- [content/README.md](content/README.md)
