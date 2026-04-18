@@ -13,6 +13,10 @@ Thumbs.db
 # pre-commit cache
 .pre-commit-cache/
 
-# 研究テーマ（非公開）
+# 研究コンテンツ（非公開）
 content/themes/*
 !content/themes/.gitkeep
+content/daily/*
+!content/daily/.gitkeep
+content/papers/*
+!content/papers/.gitkeep
