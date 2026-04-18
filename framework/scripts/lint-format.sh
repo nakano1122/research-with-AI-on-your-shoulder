@@ -5,10 +5,13 @@
 
 set -euo pipefail
 
-file_path=$(jq -r '.tool_response.filePath // .tool_input.file_path')
+input=$(cat)
 
-# content/配下のファイルのみ対象
-if [[ "$file_path" =~ ^content/ ]]; then
+file_path=$(echo "$input" | jq -r '.tool_input.file_path // empty')
+
+[[ -z "$file_path" ]] && exit 0
+
+if [[ "$file_path" == *"/content/"* ]] && [[ "$file_path" == *.md ]]; then
   npx prettier --write "$file_path" 2>/dev/null || true
-  npx markdownlint-cli --fix "$file_path" 2>/dev/null || true
+  npx markdownlint --fix "$file_path" 2>/dev/null || true
 fi
