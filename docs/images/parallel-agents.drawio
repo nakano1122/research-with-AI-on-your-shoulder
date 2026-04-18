@@ -31,8 +31,8 @@
     <mxCell id="trad_result" value="結果" style="ellipse;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
       <mxGeometry x="570" y="90" width="60" height="40" as="geometry"/>
     </mxCell>
-    <mxCell id="trad_time" value="30分" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#b85450;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="660" y="95" width="50" height="30" as="geometry"/>
+    <mxCell id="trad_time" value="時間がかかる" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="650" y="95" width="70" height="30" as="geometry"/>
     </mxCell>
     <!-- Arrows for traditional -->
     <mxCell id="te1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" edge="1" source="trad_user" target="trad_s1" parent="1">
@@ -86,11 +86,8 @@
     <mxCell id="para_result" value="結果" style="ellipse;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
       <mxGeometry x="410" y="260" width="60" height="40" as="geometry"/>
     </mxCell>
-    <mxCell id="para_time" value="10分" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontColor=#82b366;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="490" y="265" width="50" height="30" as="geometry"/>
-    </mxCell>
-    <mxCell id="speedup" value="3x faster" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#82b366;fontStyle=3;" vertex="1" parent="1">
-      <mxGeometry x="550" y="265" width="70" height="30" as="geometry"/>
+    <mxCell id="para_time" value="効率的" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="500" y="265" width="60" height="30" as="geometry"/>
     </mxCell>
     <!-- Arrows for parallel -->
     <mxCell id="pe1" style="edgeStyle=elbowEdgeStyle;elbow=vertical;strokeColor=#666666;exitX=1;exitY=0.3;entryX=0;entryY=0.5;" edge="1" source="para_user" target="para_a1" parent="1">
