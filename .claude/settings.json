@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/claude-code-settings.json",
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "allow": [
       "Bash(ls:*)",
@@ -9,15 +9,5 @@
       "WebSearch"
     ],
     "deny": ["Bash(rm -rf:*)"]
-  },
-  "mcpServers": {
-    "arxiv": {
-      "command": "uvx",
-      "args": ["arxiv-mcp-server"]
-    },
-    "academic-search": {
-      "command": "npx",
-      "args": ["-y", "academic-search-mcp-server"]
-    }
   }
 }
