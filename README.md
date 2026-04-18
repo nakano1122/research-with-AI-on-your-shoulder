@@ -29,6 +29,7 @@
 
 ```bash
 pip install pre-commit && pre-commit install
+npm install
 ```
 
 Claude Codeを開いて `/research-partner` と入力するだけ。
