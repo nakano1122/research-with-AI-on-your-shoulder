@@ -12,10 +12,12 @@ repos:
     rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
-        types_or: [markdown, yaml, json]
+        files: ^content/
+        types_or: [markdown]
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.44.0
     hooks:
       - id: markdownlint
+        files: ^content/
         args: [--fix]

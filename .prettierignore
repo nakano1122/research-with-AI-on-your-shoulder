@@ -1,0 +1,3 @@
+# content/ 以外は除外
+/*
+!content/
