@@ -25,7 +25,5 @@
 
   // スペルチェック（日本語は除外）
   "cSpell.language": "en,ja",
-  "cSpell.ignorePaths": [
-    "content/daily/**"
-  ]
+  "cSpell.ignorePaths": ["content/daily/**"]
 }

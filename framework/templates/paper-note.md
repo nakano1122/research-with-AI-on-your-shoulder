@@ -1,9 +1,9 @@
 ---
-title: "{論文タイトル}"
+title: '{論文タイトル}'
 authors: []
 year: YYYY
-venue: ""
-url: ""
+venue: ''
+url: ''
 tags: []
 read_status: unread
 ---

@@ -1,6 +1,6 @@
 ---
-title: "{研究テーマ名}"
-description: ""
+title: '{研究テーマ名}'
+description: ''
 keywords: []
 created: YYYY-MM-DD
 updated: YYYY-MM-DD

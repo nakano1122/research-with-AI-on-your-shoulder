@@ -18,12 +18,14 @@
 `{著者名}-{年}-{キーワード}.md`
 
 例:
+
 - `vaswani-2017-attention.md`
 - `devlin-2019-bert.md`
 
 ## 読書状況の管理
 
 フロントマターの `read_status` フィールドで管理:
+
 - `unread`: 未読
 - `reading`: 読書中
 - `completed`: 読了
