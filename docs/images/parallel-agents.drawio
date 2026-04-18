@@ -93,25 +93,25 @@
       <mxGeometry x="570" y="240" width="70" height="30" as="geometry"/>
     </mxCell>
     <!-- Arrows for parallel -->
-    <mxCell id="pe1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" edge="1" source="para_user" target="para_a1" parent="1">
+    <mxCell id="pe1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;exitX=1;exitY=0.25;entryX=0;entryY=0.5;" edge="1" source="para_user" target="para_a1" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="pe2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" edge="1" source="para_user" target="para_a2" parent="1">
+    <mxCell id="pe2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="para_user" target="para_a2" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="pe3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" edge="1" source="para_user" target="para_a3" parent="1">
+    <mxCell id="pe3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;exitX=1;exitY=0.75;entryX=0;entryY=0.5;" edge="1" source="para_user" target="para_a3" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="pe4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" edge="1" source="para_a1" target="para_merge" parent="1">
+    <mxCell id="pe4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" edge="1" source="para_a1" target="para_merge" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="pe5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" edge="1" source="para_a2" target="para_merge" parent="1">
+    <mxCell id="pe5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="para_a2" target="para_merge" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="pe6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" edge="1" source="para_a3" target="para_merge" parent="1">
+    <mxCell id="pe6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.75;" edge="1" source="para_a3" target="para_merge" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="pe7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;" edge="1" source="para_merge" target="para_result" parent="1">
+    <mxCell id="pe7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="para_merge" target="para_result" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
   </root>

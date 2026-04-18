@@ -1,6 +1,8 @@
 # Research with AI on Your Shoulder
 
-![Architecture](docs/images/architecture-overview.png)
+<p align="center">
+  <img src="docs/images/architecture-overview.png" alt="Architecture">
+</p>
 
 ## 特徴
 
@@ -8,11 +10,15 @@
 - **6つの専門スキル**: 調査、整理、提案を自動化
 - **ナレッジ管理**: themes/papers/dailyの3層構造
 
-![Parallel Agents](docs/images/parallel-agents.png)
+<p align="center">
+  <img src="docs/images/parallel-agents.png" alt="Parallel Agents">
+</p>
 
 ## 使い方
 
-![Workflow](docs/images/workflow-example.png)
+<p align="center">
+  <img src="docs/images/workflow-example.png" alt="Workflow">
+</p>
 
 ## セットアップ
 
@@ -24,7 +30,9 @@ pip install pre-commit && pre-commit install
 
 ## ディレクトリ構成
 
-![Knowledge Structure](docs/images/knowledge-structure.png)
+<p align="center">
+  <img src="docs/images/knowledge-structure.png" alt="Knowledge Structure">
+</p>
 
 ## 詳細
 

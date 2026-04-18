@@ -50,16 +50,16 @@
       <mxGeometry x="190" y="335" width="220" height="25" as="geometry"/>
     </mxCell>
     <!-- Arrows -->
-    <mxCell id="a1" value="参照" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;endArrow=classic;" edge="1" source="themes_box" target="papers_box" parent="1">
+    <mxCell id="a1" value="参照" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;endArrow=classic;exitX=0.25;exitY=1;entryX=0.5;entryY=0;" edge="1" source="themes_box" target="papers_box" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="a2" value="参照" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;endArrow=classic;" edge="1" source="themes_box" target="daily_box" parent="1">
+    <mxCell id="a2" value="参照" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;endArrow=classic;exitX=0.75;exitY=1;entryX=0.5;entryY=0;" edge="1" source="themes_box" target="daily_box" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="a3" value="関連" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=1;dashed=1;endArrow=classic;startArrow=classic;" edge="1" source="papers_box" target="daily_box" parent="1">
+    <mxCell id="a3" value="関連" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=1;dashed=1;endArrow=classic;startArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="papers_box" target="daily_box" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="a4" value="生成" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=1;dashed=1;endArrow=classic;" edge="1" source="daily_box" target="gen_box" parent="1">
+    <mxCell id="a4" value="生成" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=1;dashed=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="daily_box" target="gen_box" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
   </root>

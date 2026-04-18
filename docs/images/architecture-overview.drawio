@@ -57,14 +57,14 @@
     <mxCell id="drawio" value="draw.io" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
       <mxGeometry x="450" y="340" width="80" height="40" as="geometry"/>
     </mxCell>
-    <!-- Arrows from survey to MCPs -->
-    <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#999999;dashed=1;" edge="1" source="survey" target="arxiv" parent="1">
+    <!-- Arrows from skills to MCPs -->
+    <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#999999;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="survey" target="arxiv" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#999999;dashed=1;" edge="1" source="survey" target="semantic" parent="1">
+    <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#999999;dashed=1;exitX=0.75;exitY=1;entryX=0.25;entryY=0;" edge="1" source="idea" target="semantic" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
-    <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#999999;dashed=1;" edge="1" source="idea" target="drawio" parent="1">
+    <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#999999;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="related" target="drawio" parent="1">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <!-- Content Layer -->
