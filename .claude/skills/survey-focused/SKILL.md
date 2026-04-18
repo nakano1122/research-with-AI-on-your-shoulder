@@ -55,6 +55,16 @@ Glob content/themes/*.md
 cp framework/templates/paper-note.md content/papers/{著者}-{年}-{キーワード}.md
 ```
 
+## 並列エージェント設計（必須）
+
+論文調査は必ず複数エージェントで並列に実行:
+
+- Agent 1: 主要キーワードでの検索
+- Agent 2: 関連分野での検索
+- Agent 3: 引用ネットワーク/著者追跡
+
+各エージェントは独立して調査し、結果を統合する。
+
 ## 出力形式
 
 調査結果をユーザーに報告:
