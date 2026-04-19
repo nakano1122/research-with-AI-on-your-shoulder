@@ -20,11 +20,14 @@ brew install poppler
 ## ワークフロー
 
 ```
-1. PDF選択
-   → content/papers/pdfs/ から対象PDFを選択
+0. 論文ディレクトリ作成
+   → ./framework/scripts/new-paper.sh {論文名} で雛形作成
 
-2. 出力ディレクトリ作成
-   → content/papers/markdown/{論文名}/ を作成
+1. PDF選択
+   → content/papers/{論文名}/original.pdf を対象にする
+
+2. 画像出力ディレクトリ作成
+   → content/papers/{論文名}/images/ を作成
 
 3. ページ画像抽出
    → pdftoppm でページごとにPNG画像を生成
@@ -35,18 +38,29 @@ brew install poppler
    → 図表は適切な位置にページ画像として挿入
 
 5. 保存・連携
-   → {論文名}.md として保存
-   → /paper-reader に連携して解説ファイルを作成
+   → paper.md として保存
+   → /paper-reader に連携して解説ノートを作成
+
+6. リスト更新
+   → content/papers/reading-list.md と content/papers/_index.md を更新
 ```
+
+## ステップ0: 論文ディレクトリ作成
+
+```bash
+./framework/scripts/new-paper.sh {論文名}
+```
+
+これにより `content/papers/{論文名}/` と `images/` が作成される。
 
 ## ステップ1: ページ画像抽出
 
 ```bash
-# 出力ディレクトリ作成
-mkdir -p content/papers/markdown/{論文名}
+# 画像出力ディレクトリ作成
+mkdir -p content/papers/{論文名}/images
 
 # PDFの各ページをPNG画像に変換
-pdftoppm -png "content/papers/pdfs/{ファイル名}.pdf" "content/papers/markdown/{論文名}/page"
+pdftoppm -png "content/papers/{論文名}/original.pdf" "content/papers/{論文名}/images/page"
 ```
 
 ## ステップ2: エージェントによる変換
@@ -55,8 +69,8 @@ pdftoppm -png "content/papers/pdfs/{ファイル名}.pdf" "content/papers/markdo
 
 ```
 # 各ページを読み込み
-Read content/papers/markdown/{論文名}/page-01.png
-Read content/papers/markdown/{論文名}/page-02.png
+Read content/papers/{論文名}/images/page-01.png
+Read content/papers/{論文名}/images/page-02.png
 ...
 ```
 
@@ -72,26 +86,53 @@ Read content/papers/markdown/{論文名}/page-02.png
 ### 図表の挿入形式
 
 ```markdown
-![Figure 1: Overview of MIRROR framework](page-02.png)
+![Figure 1: Overview of MIRROR framework](images/page-02.png)
 ```
 
-図表が登場するセクションに、対応するページ画像への参照を挿入する。
+図表が登場するセクションに、対応するページ画像（`images/` 相対パス）への参照を挿入する。
 
 ## 出力構造
 
 ```
-content/papers/markdown/
-└── {論文名}/
-    ├── {論文名}.md      # 変換後のMarkdown
-    ├── page-01.png      # ページ画像
+content/papers/{論文名}/
+├── original.pdf         # 元のPDF
+├── paper.md             # 変換後のMarkdown
+└── images/
+    ├── page-01.png
     ├── page-02.png
     └── ...
 ```
 
 ## スキル連携
 
-変換完了後、自動的に `/paper-reader` を呼び出して解説ファイルを作成する。
+変換完了後、自動的に `/paper-reader` を呼び出して解説ノート（`note.md`）を作成する。
 
 ```
-/pdf-to-markdown → /paper-reader → 解説ノート
+/pdf-to-markdown → /paper-reader → note.md
 ```
+
+## リスト更新
+
+### reading-list.md
+
+読了した論文を `content/papers/reading-list.md` の「読了済み」セクションに移動:
+
+```markdown
+- [x] **{論文タイトル}** ({学会} {年})
+  - ノート: [{論文名}/note.md]({論文名}/note.md)
+```
+
+### _index.md
+
+`content/papers/_index.md` の「登録済み論文」に追加:
+
+```markdown
+- [{論文名}]({論文名}/) - {論文タイトル}
+```
+
+## 進捗報告
+
+Agent Teamsで起動された場合、以下のタイミングでチームリーダー（research-partner）に報告:
+- 作業開始時: 対象ファイルと作業内容
+- 中間報告: 主要なステップの完了時
+- 作業完了時: 成果物と次のアクション

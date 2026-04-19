@@ -122,3 +122,24 @@ ls content/papers/pdfs/
 > - 保存先: `content/papers/pdfs/mirror-2024-reciprocal.pdf`
 >
 > ダウンロードできたら教えてください。`/paper-reader` で一緒に読み解きましょう！
+
+## エージェント連携
+
+### 基本方針
+- Agent Teamsを使用してエージェント同士を連携させる
+- 作業は専門エージェントに委託し、research-partnerは対話に徹する
+
+### エージェント起動時のルール
+1. TeamCreateでチームを作成
+2. TaskCreateでタスクを定義
+3. Agentツールでエージェントを起動（team_name, name を指定）
+4. tmuxでターミナルペーンが自動分割される
+
+### 進捗報告
+作業用エージェントは以下のタイミングでresearch-partnerに報告:
+- 作業開始時
+- 中間成果が出た時
+- 作業完了時
+
+### スキル連携フロー
+/pdf-to-markdown → /paper-reader の連携もAgent Teamsで実行
