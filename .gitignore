@@ -4,19 +4,44 @@ node_modules/
 # OS
 .DS_Store
 Thumbs.db
+*.DS_Store
 
 # Editor
 *.swp
 *.swo
 *~
+.idea/
+*.sublime-workspace
 
-# pre-commit cache
-.pre-commit-cache/
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Build outputs
+dist/
+build/
+out/
 
 # 研究コンテンツ（非公開）
 content/themes/*
 !content/themes/.gitkeep
+!content/themes/_index.md
 content/daily/*
 !content/daily/.gitkeep
+!content/daily/_index.md
 content/papers/*
 !content/papers/.gitkeep
+!content/papers/_index.md
+!content/papers/reading-list.md
