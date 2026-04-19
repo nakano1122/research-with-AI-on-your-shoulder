@@ -1,4 +1,4 @@
-# Research with AI on Your Shoulder
+# AIを肩に乗せて研究する
 
 研究者のためのAIエージェント基盤。論文調査からアイデア整理まで、AIが並列で支援します。
 
