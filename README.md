@@ -2,6 +2,10 @@
 
 研究者のためのAIエージェント基盤。論文調査からアイデア整理まで、AIが並列で支援します。
 
+<p align="center">
+  <img src="docs/images/architecture-overview.png" alt="Architecture Overview" width="600">
+</p>
+
 ## 特徴
 
 - **研究特化スキル**: 論文調査、関連研究の発見、アイデア整理、次のアクション提案など、研究ワークフローに最適化
