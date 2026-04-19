@@ -7,8 +7,11 @@
 ```
 Claude Code (Orchestrator)
     │
-    │ Bash で codex コマンド実行
+    │ Agentツールでワーカー起動
+    ▼
+codex-worker Agent
     │
+    │ Bashで codex exec 実行
     ▼
 Codex CLI (Worker)
     - 高速・低コスト実行
@@ -45,31 +48,31 @@ export OPENAI_API_KEY="your-api-key"
 
 ### Claude Code から Codex を呼び出す
 
-Claude Code 内で `/codex-cli` スキルを使用:
+Claude Code 内で `/codex-task` スキルを使用するか、Agentツールでワーカーを起動:
 
 ```bash
-codex -q "content/papers/pdfs/paper.pdf を要約して"
+codex exec "content/papers/pdfs/paper.pdf を要約して" --full-auto
 ```
 
 ### 並列実行
 
 ```bash
-codex -q "タスク1" &
-codex -q "タスク2" &
+codex exec "タスク1" --full-auto &
+codex exec "タスク2" --full-auto &
 wait
 ```
 
 ### 承認モード
 
 ```bash
-# Suggest: 提案のみ
-codex -a suggest -q "タスク"
+# 対話モード（デフォルト）
+codex "タスク"
 
-# Auto Edit: ファイル編集は自動
-codex -a auto-edit -q "タスク"
+# Full Auto: sandbox内で自動実行
+codex exec "タスク" --full-auto
 
-# Full Auto: すべて自動
-codex -a full-auto -q "タスク"
+# Read-only sandbox
+codex exec "タスク" --sandbox read-only
 ```
 
 ## MCP サーバー
