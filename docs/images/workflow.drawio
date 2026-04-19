@@ -1,0 +1,95 @@
+<mxGraphModel dx="900" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="350">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- Title -->
+    <mxCell id="title" value="研究ワークフロー" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="300" y="10" width="200" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 1 -->
+    <mxCell id="step1" value="1. 相談開始&#xa;/research-partner" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="20" y="60" width="110" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 2 -->
+    <mxCell id="step2" value="2. 状況把握&#xa;themes/ daily/" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="150" y="60" width="110" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 3 -->
+    <mxCell id="step3" value="3. 論文調査&#xa;/survey-*" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="280" y="60" width="110" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 4 -->
+    <mxCell id="step4" value="4. 論文精読&#xa;/paper-reader" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="410" y="60" width="110" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 5 -->
+    <mxCell id="step5" value="5. アイデア整理&#xa;/idea-organizer" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="540" y="60" width="110" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Step 6 -->
+    <mxCell id="step6" value="6. 次のアクション&#xa;/next-action" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="670" y="60" width="110" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrows -->
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;strokeWidth=2;endArrow=classic;" edge="1" source="step1" target="step2" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;strokeWidth=2;endArrow=classic;" edge="1" source="step2" target="step3" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;strokeWidth=2;endArrow=classic;" edge="1" source="step3" target="step4" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;strokeWidth=2;endArrow=classic;" edge="1" source="step4" target="step5" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;strokeWidth=2;endArrow=classic;" edge="1" source="step5" target="step6" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Content Storage -->
+    <mxCell id="content_box" value="" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="200" y="150" width="400" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="content_label" value="content/ に蓄積" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="210" y="155" width="100" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="themes" value="themes/&#xa;研究テーマ" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="220" y="180" width="80" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="daily" value="daily/&#xa;日次メモ" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="360" y="180" width="80" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="papers" value="papers/&#xa;論文ノート" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+      <mxGeometry x="500" y="180" width="80" height="35" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrows to Content -->
+    <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=1;dashed=1;endArrow=classic;" edge="1" source="step3" target="daily" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=1;dashed=1;endArrow=classic;" edge="1" source="step4" target="papers" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Loop Arrow -->
+    <mxCell id="loop" value="繰り返し" style="curved=1;endArrow=classic;strokeColor=#9673a6;strokeWidth=2;dashed=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="720" y="130" as="sourcePoint"/>
+        <mxPoint x="80" y="130" as="targetPoint"/>
+        <Array as="points">
+          <mxPoint x="400" y="280"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

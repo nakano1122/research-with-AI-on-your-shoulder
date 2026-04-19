@@ -1,0 +1,90 @@
+<mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="400">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- Title -->
+    <mxCell id="title" value="マルチエージェント並列調査" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="150" y="10" width="300" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- User Query -->
+    <mxCell id="query" value="調査リクエスト" style="rounded=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="230" y="50" width="140" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- Survey Skill -->
+    <mxCell id="survey" value="/survey-broad" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="230" y="120" width="140" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrow: Query to Survey -->
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#666666;strokeWidth=2;endArrow=classic;" edge="1" source="query" target="survey" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Agents Container -->
+    <mxCell id="agents_label" value="並列エージェント" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="230" y="175" width="140" height="20" as="geometry"/>
+    </mxCell>
+
+    <!-- Agent 1 -->
+    <mxCell id="agent1" value="Agent 1&#xa;主要キーワード" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="50" y="200" width="110" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Agent 2 -->
+    <mxCell id="agent2" value="Agent 2&#xa;関連分野+手法" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="245" y="200" width="110" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Agent 3 -->
+    <mxCell id="agent3" value="Agent 3&#xa;応用領域" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="440" y="200" width="110" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrows: Survey to Agents -->
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;endArrow=classic;" edge="1" source="survey" target="agent1" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;endArrow=classic;" edge="1" source="survey" target="agent2" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;endArrow=classic;" edge="1" source="survey" target="agent3" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- MCP Sources -->
+    <mxCell id="mcp_box" value="" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="160" y="280" width="280" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="arxiv" value="arXiv MCP" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="175" y="290" width="100" height="30" as="geometry"/>
+    </mxCell>
+    <mxCell id="semantic" value="Semantic Scholar" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="325" y="290" width="100" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrows: Agents to MCP -->
+    <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#d6b656;strokeWidth=1;dashed=1;endArrow=classic;" edge="1" source="agent1" target="mcp_box" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#d6b656;strokeWidth=1;dashed=1;endArrow=classic;" edge="1" source="agent2" target="mcp_box" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#d6b656;strokeWidth=1;dashed=1;endArrow=classic;" edge="1" source="agent3" target="mcp_box" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Result -->
+    <mxCell id="result" value="統合された調査結果&#xa;重複排除 + 関連度ソート" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="200" y="355" width="200" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrow: MCP to Result -->
+    <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=2;endArrow=classic;" edge="1" source="mcp_box" target="result" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
