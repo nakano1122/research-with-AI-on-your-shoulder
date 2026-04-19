@@ -37,11 +37,7 @@ out/
 # 研究コンテンツ（非公開）
 content/themes/*
 !content/themes/.gitkeep
-!content/themes/_index.md
 content/daily/*
 !content/daily/.gitkeep
-!content/daily/_index.md
 content/papers/*
 !content/papers/.gitkeep
-!content/papers/_index.md
-!content/papers/reading-list.md
