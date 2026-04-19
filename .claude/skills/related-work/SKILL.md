@@ -109,6 +109,38 @@ WebSearch query="{キーワード} related work survey"
 既存の論文ノートがあれば参照:
 
 ```bash
-Glob content/papers/*.md
-Grep "{キーワード}" content/papers/
+Glob content/papers/notes/*.md
+Grep "{キーワード}" content/papers/notes/
 ```
+
+## 論文ダウンロードフロー
+
+重要な関連研究を特定したら、ユーザーにダウンロードを依頼:
+
+```markdown
+### ダウンロード推奨論文
+
+以下の論文をダウンロードして `content/papers/pdfs/` に保存してください:
+
+| 論文 | URL | 保存名 |
+|------|-----|--------|
+| {タイトル} | [ACM DL](...) | {著者}-{年}-{キーワード}.pdf |
+
+ダウンロード後は `/paper-reader` で詳細を読み解けます。
+```
+
+### reading-list.md への追記
+
+見つけた重要論文を `content/papers/reading-list.md` に追加:
+
+```bash
+# 優先度に応じて追記
+Edit content/papers/reading-list.md
+# フォーマット: - [ ] **タイトル** (学会 年) - 関連理由
+```
+
+## paper-reader スキルとの連携
+
+ユーザーが論文をダウンロードしたら `/paper-reader` を案内:
+
+> 論文がダウンロードできたら `/paper-reader` で詳しく読み解けますよ。

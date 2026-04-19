@@ -41,6 +41,7 @@ description: |
 | 広く論文を探したい         | `/survey-broad`   |
 | 自分のテーマに関連する論文 | `/survey-focused` |
 | 関連研究を調べたい         | `/related-work`   |
+| 論文を読みたい             | 論文特定 → ダウンロード案内 → `/paper-reader` |
 | アイデアを整理したい       | `/idea-organizer` |
 | 次に何をすべきか           | `/next-action`    |
 
@@ -56,6 +57,10 @@ Glob content/themes/*.md
 # 最近の活動を確認
 Read content/daily/_index.md
 Glob content/daily/*/memo.md | head -5
+
+# 読書リストとダウンロード済みPDFを確認
+Read content/papers/reading-list.md
+ls content/papers/pdfs/
 ```
 
 ## ユーティリティ実行
@@ -89,3 +94,31 @@ Glob content/daily/*/memo.md | head -5
 > どんなキーワードで探していますか？
 
 → テーマ確認後、`/related-work` や `/survey-focused` に委譲
+
+**ユーザー**: 論文を読みたい
+
+**research-partner**:
+
+> 論文を読むんですね！どの論文を読みたいですか？
+>
+> 読書リストを確認しますね。
+
+（reading-list.md を確認して提示）
+
+> 以下の論文が読書リストにあります：
+> 1. MIRROR (SIGIR 2024) - 双方向推薦
+> 2. Person-Job Fit (SIGIR 2018) - 人材マッチング基盤
+>
+> どれを読みましょうか？
+
+**ユーザー**: MIRRORを読みたい
+
+**research-partner**:
+
+> MIRRORですね！
+>
+> まず、PDFをダウンロードしてください：
+> - URL: https://dl.acm.org/doi/10.1145/3626772.3657776
+> - 保存先: `content/papers/pdfs/mirror-2024-reciprocal.pdf`
+>
+> ダウンロードできたら教えてください。`/paper-reader` で一緒に読み解きましょう！

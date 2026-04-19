@@ -46,14 +46,43 @@ Glob content/themes/*.md
 2. **引用追跡**: 重要論文の引用・被引用を辿る
 3. **著者追跡**: キーパーソンの他の論文を確認
 
+## 論文ダウンロードフロー
+
+重要論文を特定したら、ユーザーにダウンロードを依頼:
+
+```markdown
+### ダウンロード推奨論文
+
+以下の論文をダウンロードして `content/papers/pdfs/` に保存してください:
+
+| 論文 | URL | 保存名 |
+|------|-----|--------|
+| {タイトル} | [ACM DL](...) | {著者}-{年}-{キーワード}.pdf |
+
+ダウンロード後は `/paper-reader` で詳細を読み解けます。
+```
+
+### reading-list.md への追記
+
+```bash
+# 優先度に応じて content/papers/reading-list.md に追記
+# フォーマット: - [ ] **タイトル** (学会 年) - 関連理由
+```
+
 ## 論文ノート作成
 
-発見した重要論文は `content/papers/` にノートを作成:
+論文を読了したら `content/papers/notes/` にノートを作成:
 
 ```bash
 # テンプレートを使用
-cp framework/templates/paper-note.md content/papers/{著者}-{年}-{キーワード}.md
+cp framework/templates/paper-note.md content/papers/notes/{著者}-{年}-{キーワード}.md
 ```
+
+## paper-reader スキルとの連携
+
+ユーザーが論文をダウンロードしたら `/paper-reader` を案内:
+
+> 論文がダウンロードできたら `/paper-reader` で詳しく読み解けますよ。
 
 ## 並列エージェント設計（必須）
 
