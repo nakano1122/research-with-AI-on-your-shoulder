@@ -20,7 +20,7 @@ if [ -d "$PAPER_DIR" ]; then
 fi
 
 # ディレクトリ作成
-mkdir -p "$PAPER_DIR/images"
+mkdir -p "$PAPER_DIR"
 
 echo "論文ディレクトリを作成しました: $PAPER_DIR"
 echo "次のステップ:"
