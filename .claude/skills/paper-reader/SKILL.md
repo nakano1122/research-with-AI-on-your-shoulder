@@ -16,29 +16,40 @@ Markdown形式に変換された論文を読み込み、要約・解説・質問
    → content/papers/ を確認
    → ユーザーに読みたい論文を選択してもらう
 
-2. paper.md 読み込み
-   → Readツールで content/papers/{論文名}/paper.md を読み込み
-   → images/ 内のページ画像も必要に応じて参照
+2. PDF → Markdown 変換（必須）
+   → paper.md が存在しない場合、必ず /pdf-to-markdown を先に実行
+   → original.pdf から paper.md を生成
+   → この変換なしにノート作成を開始してはならない
 
-3. ノート作成・更新
+3. paper.md 読み込み
+   → Readツールで content/papers/{論文名}/paper.md を読み込み
+
+4. ノート作成・更新
    → テンプレートを参照して項目を埋める
    → ユーザーとの対話を通じて理解を深める
 
-4. ノート保存
+5. ノート保存
    → content/papers/{論文名}/note.md に保存
 ```
 
-## ノート作成の方針
+## 重要: PDF変換の必須化
 
-### 画像の活用
+**論文ノートを作成する前に、必ず `/pdf-to-markdown` でPDFをMarkdownに変換すること。**
 
-- **論文中の画像を積極的に使用する**
-- 特にアーキテクチャ図は必ず引用する
-- 画像を見ながら説明することで理解を促進
+理由:
+- paper.md がないと論文の全文を参照できない
+- 変換せずにノートを書くと、不正確・不完全な内容になる
 
-```markdown
-![アーキテクチャ図](images/page-05.png)
+変換前チェック:
+```bash
+# paper.md の存在確認
+ls content/papers/{論文名}/paper.md
+
+# なければ変換を実行
+/pdf-to-markdown content/papers/{論文名}/original.pdf
 ```
+
+## ノート作成の方針
 
 ### 「何をしたか」より「どんなアイデアか」
 

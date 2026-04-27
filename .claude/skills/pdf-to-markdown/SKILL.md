@@ -1,21 +1,13 @@
 ---
 name: pdf-to-markdown
 description: |
-  論文PDFをMarkdown形式に変換する。エージェントがページ画像を解釈して構造化。
+  論文PDFをMarkdown形式に変換する。PDFを直接読み込んで構造化。
   トリガー: 「PDFをMarkdownに変換」「論文を変換して」
 ---
 
 # PDF to Markdown
 
-論文PDFをMarkdown形式に変換する。エージェントがページ画像を見ながら論理構造を解釈し、正確なMarkdownを生成する。
-
-## 前提条件
-
-`poppler` がインストールされていること:
-
-```bash
-brew install poppler
-```
+論文PDFをMarkdown形式に変換する。PDFを直接読み込み、論理構造を解釈して正確なMarkdownを生成する。
 
 ## ワークフロー
 
@@ -26,22 +18,15 @@ brew install poppler
 1. PDF選択
    → content/papers/{論文名}/original.pdf を対象にする
 
-2. 画像出力ディレクトリ作成
-   → content/papers/{論文名}/images/ を作成
-
-3. ページ画像抽出
-   → pdftoppm でページごとにPNG画像を生成
-
-4. エージェントによるMarkdown変換
-   → ページ画像を順番に読み込み
+2. PDFをMarkdownに変換
+   → ReadツールでPDFを直接読み込み
    → 論理構造を解釈してMarkdownを生成
-   → 図表は適切な位置にページ画像として挿入
 
-5. 保存・連携
+3. 保存・連携
    → paper.md として保存
    → /paper-reader に連携して解説ノートを作成
 
-6. リスト更新
+4. リスト更新
    → content/papers/reading-list.md と content/papers/_index.md を更新
 ```
 
@@ -51,27 +36,15 @@ brew install poppler
 ./framework/scripts/new-paper.sh {論文名}
 ```
 
-これにより `content/papers/{論文名}/` と `images/` が作成される。
+これにより `content/papers/{論文名}/` が作成される。
 
-## ステップ1: ページ画像抽出
+## ステップ1: PDFをMarkdownに変換
 
-```bash
-# 画像出力ディレクトリ作成
-mkdir -p content/papers/{論文名}/images
-
-# PDFの各ページをPNG画像に変換
-pdftoppm -png "content/papers/{論文名}/original.pdf" "content/papers/{論文名}/images/page"
-```
-
-## ステップ2: エージェントによる変換
-
-ページ画像を順番にReadツールで読み込み、Markdownに変換する。
+ReadツールでPDFを直接読み込み、Markdownに変換する。
 
 ```
-# 各ページを読み込み
-Read content/papers/{論文名}/images/page-01.png
-Read content/papers/{論文名}/images/page-02.png
-...
+# PDFを読み込み
+Read content/papers/{論文名}/original.pdf
 ```
 
 ### 変換ルール
@@ -81,26 +54,14 @@ Read content/papers/{論文名}/images/page-02.png
 3. **Abstract**: H2セクションとして配置
 4. **各セクション**: H2/H3で階層化（番号付きセクションを維持）
 5. **数式**: LaTeX形式（$...$）で記述
-6. **図表**: ページ画像を参照として挿入
-
-### 図表の挿入形式
-
-```markdown
-![Figure 1: Overview of MIRROR framework](images/page-02.png)
-```
-
-図表が登場するセクションに、対応するページ画像（`images/` 相対パス）への参照を挿入する。
+6. **図表**: 本文中で図の内容を説明する形で記載
 
 ## 出力構造
 
 ```
 content/papers/{論文名}/
 ├── original.pdf         # 元のPDF
-├── paper.md             # 変換後のMarkdown
-└── images/
-    ├── page-01.png
-    ├── page-02.png
-    └── ...
+└── paper.md             # 変換後のMarkdown
 ```
 
 ## スキル連携
