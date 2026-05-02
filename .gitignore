@@ -41,3 +41,4 @@ content/daily/*
 !content/daily/.gitkeep
 content/papers/*
 !content/papers/.gitkeep
+.serena
