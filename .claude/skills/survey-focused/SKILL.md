@@ -13,7 +13,8 @@ description: |
 
 ```
 1. テーマ確認
-   → content/themes/*.md を読み込み
+   → content/themes/_index.md を読み、テーマ一覧を表示
+   → content/themes/{テーマ名}/*.md を読み込み
    → ユーザーに調査対象を確認
 
 2. 深掘り検索
@@ -30,9 +31,11 @@ description: |
 ## テーマ参照
 
 ```bash
-# テーマファイルを読み込み
+# テーマ一覧を確認
 Read content/themes/_index.md
-Glob content/themes/*.md
+
+# 選択されたテーマのファイルを読み込み
+Glob content/themes/{テーマ名}/*.md
 
 # テーマから抽出する情報
 - keywords: 検索キーワード

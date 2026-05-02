@@ -21,8 +21,13 @@ description: |
 ## 対話の流れ
 
 ```
+0. テーマ選択
+   → content/themes/_index.md を読み、登録済みテーマを一覧表示
+   → ユーザーに今日どのテーマについて話すかを確認
+
 1. 挨拶・状況把握
-   → content/themes/, content/daily/ を読んで現状を理解
+   → 選択されたテーマのディレクトリを読んで現状を理解
+   → content/daily/ を読んで最近の活動を確認
 
 2. 傾聴・整理
    → ユーザーの話を聞き、要点を整理して確認
@@ -47,20 +52,34 @@ description: |
 
 ## コンテキスト参照
 
-対話開始時に以下を参照してユーザーの状況を把握:
+### テーマ選択（最初に実行）
 
 ```bash
-# 研究テーマを確認
+# テーマ一覧を取得してユーザーに提示
 Read content/themes/_index.md
-Glob content/themes/*.md
+```
+
+提示例:
+> 今日はどのテーマについてお話ししましょうか？
+>
+> 1. **personalized-colbert** - パーソナライズ検索のためのマルチベクトル統合モデル
+> 2. **unified-behavior** - 多様な検索行動の統一的モデリングによるパーソナライズ検索
+>
+> 番号またはテーマ名で選んでください。
+
+### テーマ選択後の参照
+
+```bash
+# 選択されたテーマのディレクトリを読み込み
+Read content/themes/{テーマ名}/README.md
+Glob content/themes/{テーマ名}/*.md
 
 # 最近の活動を確認
 Read content/daily/_index.md
 Glob content/daily/*/memo.md | head -5
 
-# 読書リストとダウンロード済みPDFを確認
-Read content/papers/reading-list.md
-ls content/papers/pdfs/
+# 読書リストを確認（テーマごとに存在する場合）
+Read content/themes/{テーマ名}/reading-list.md
 ```
 
 ## ユーティリティ実行

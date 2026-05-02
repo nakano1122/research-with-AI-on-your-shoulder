@@ -32,9 +32,11 @@ description: |
 ## 状況把握
 
 ```bash
-# 目標を確認
+# テーマ一覧を確認し、対象テーマを選択
 Read content/themes/_index.md
-Glob content/themes/*.md
+
+# 選択されたテーマの目標を確認
+Glob content/themes/{テーマ名}/*.md
 
 # 最近の活動を確認
 Glob content/daily/*/memo.md | sort -r | head -5

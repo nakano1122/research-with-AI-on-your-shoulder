@@ -165,3 +165,7 @@ Draw.io形式（.drawio）でニューラルネットワークや機械学習手
 ## 参考
 
 - 詳細パターン: [references/patterns.md](references/patterns.md)
+- 作成例: `content/themes/personalized-colbert/diagrams/`
+  - `proposed.drawio` - 提案手法（PersonalizedColBERT）
+  - `bm25.drawio`, `colbertv2.drawio`, `dpr.drawio` - 検索ベースライン
+  - `uia.drawio`, `mars.drawio`, `pqewc.drawio` - パーソナライズ手法
